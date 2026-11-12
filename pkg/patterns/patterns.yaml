@@ -110,6 +110,7 @@ tier_a:
   - pattern: 'K10[a-f0-9]{64}::(?:server|node):[A-Za-z0-9._-]{16,}'
   # Meta (Facebook/WhatsApp Cloud API) access token
   - pattern: 'EAA[A-Za-z0-9]{100,}'
+    key_boundary: true
 tier_b:
   - pattern: '-----BEGIN[ A-Z0-9_-]{0,40}PRIVATE KEY(?: BLOCK)?-----'
     handling: pem_span
